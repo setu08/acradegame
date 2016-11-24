@@ -22,10 +22,10 @@ Enemy.prototype.update = function(dt) {
     // which will ensure the game runs at the same speed for
     // all computers.
     this.x = this.x + this.speed * dt;
-    var spaceSize = 50;
+    var spaceSize = 60;
 
     // Putting the enemies with different speeds
-    if (this.x > 500) {
+    if (this.x >= 500) {
         this.x = -spaceSize;
         this.speed = spaceSize * Math.floor(Math.random() * 7 + 2);
     }
